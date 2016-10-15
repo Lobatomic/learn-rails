@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-root to: 'visitors#new'
+  resources :contacts, only: [:new, :create]
+  root to: 'visitors#new'
  #   root to: redirect('/about.html')
 
   # Example of regular route:
